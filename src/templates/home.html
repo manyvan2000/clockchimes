@@ -1,0 +1,26 @@
+<section class="section container-fluid">
+  <h1 class="page-header">Welcome to ClockChimes</h1>  
+  <form ng-submit="submit()" ng-controller="MainController">
+	  <div>
+	  <label class="line-width"> Start Time: 
+		  <div class="styled-select blue semi-square">
+  <select ng-change="timesChanged()" ng-model=startTime ng-options="n for n in [] | range:1:24"> </select>
+		  </div>
+	  </label>
+	  </div>
+	  <div>
+	  <label class="line-width"> End Time: 
+		  <div class="styled-select blue semi-square">
+  <select ng-model=endTime ng-change="timesChanged()" ng-options="n for n in [] | range:1:24"> </select>
+		  </div>
+	  </label>
+	  </div>
+	  <div>
+  <label class="line-width"> Number of times the clock will chime: </label>
+  </div>
+  	<div class="square-box line-width">
+		<div class="square-content"> <div class="center">{{numberOfChimes}}</div> </div> 
+	</div>
+	  </form>
+
+</section>
